@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>All the articles about cars</h2>
+
+    {% if cars|length > 0 %}
+        {% for car in cars%}
+            <div class="alert alert-info" style="background-color: lightcyan; border: lightcyan">
+                <h3>{{ car.name }}</h3>
+                <p>Publication date: {{ car.date.date() }}</p>
+                <a href="/articles/{{ car.id }}" class="btn btn-outline-warning">Read more</a>
+            </div>
+        {%  endfor %}
+    {% else %}
+    <h2>There is not a single article! You can add it!</h2>
+    {% endif %}
+</div>
+{% endblock %}

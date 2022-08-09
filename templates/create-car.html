@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{%  block content %}
+
+<div class="container mt-5">
+    <h2>Add new car</h2>
+    <form method="post">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Input model of the car..."><br>
+        <textarea name="description" id="description" class="form-control" placeholder="Input description of the car..."></textarea><br>
+        <input type="submit" class="btn btn-outline-success" value="Add">
+    </form>
+</div>
+
+{% endblock %}

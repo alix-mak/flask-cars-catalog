@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-1 mb-1 text-center">
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Car's catalog</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>You may find here {{ cars|length }} articles about cars!</li>
+          <li>You can add your own article.</li>
+          <li>You can edit and delete source articles.</li>
+          <li>Enjoy!</li>
+        </ul>
+        <a href="/articles" type="button" class="w-100 btn btn-lg btn-outline-warning">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+{%  endblock %}

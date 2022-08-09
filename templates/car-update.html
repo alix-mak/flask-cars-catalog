@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Edit article about {{ car.name }}</h2>
+    <form method="post">
+        <input type="text" name="name" id="name" class="form-control" value="{{ car.name }}" placeholder="Input model of the car..."><br>
+        <textarea name="description" id="description" class="form-control" placeholder="Input description of the car...">{{ car.description }}</textarea><br>
+        <input type="submit" class="btn btn-outline-success" value="Save">
+    </form>
+</div>
+{% endblock %}
